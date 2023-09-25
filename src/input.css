@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* body {
+    @apply text-dark_dark text-[1.6rem] font-Poppins overflow-x-hidden leading-[1.4rem];
+  }
+  a {
+    @apply decoration-0;
+  }
+  img {
+    @apply max-w-full w-full;
+  }
+  h2 {
+    @apply text-[2rem];
+  } */
+}
+@layer components {
+  .container {
+    @apply w-full max-w-[100rem] mx-auto px-[5rem];
+  }
+
+  /* HEADER */
+  .container {
+    @apply max-w-[80rem] w-full p-5 mx-auto;
+  }
+
+  @layer components {
+    .header {
+      @apply relative;
+    }
+    .header a {
+      @apply text-light;
+    }
+    .header .branding img {
+      @apply w-7;
+    }
+    .header .header__brand a {
+      @apply flex items-center gap-3;
+    }
+    .header .header__brand h1 {
+      @apply text-light;
+    }
+    .header .header__action {
+      @apply hidden;
+    }
+    .header .header__nav li a {
+      @apply text-[1rem];
+    }
+    .header .header__nav {
+      @apply flex flex-col absolute h-0 overflow-y-scroll bg-l_dark left-0 w-full;
+    }
+    /* .header .header__nav li:last-child {
+      @apply absolute left-0 bottom-0 w-full;
+    } */
+    .header .header__nav li {
+      @apply py-3 px-5;
+    }
+    .header .toggle__menu {
+      @apply flex flex-col gap-1 p-2;
+    }
+    .header .toggle__menu span {
+      @apply w-7 h-[.1rem] bg-light block rounded-full;
+    }
+    .header .header__wrapper {
+      @apply flex items-center justify-between;
+    }
+    .header .header__nav.open {
+        @apply h-[24.5rem] ease-in-out duration-300;
+    }
+    .header .header__wrapper .toggle__menu.open {
+        @apply bg-primary_blue rounded-[.2rem]; 
+    }
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-block px-3 py-1 border-[1px];
+  }
+  .btn.bg--blue {
+    @apply bg-primary_blue border-0;
+  }
+}
+
+/* .header__text {
+    @apply flex gap-2;
+  }
+  .header__text img {
+    @apply h-[2rem] w-[2rem];
+  }
+  .header__text h1 {
+    @apply text-light;
+  } */
+/* .toggle__menu {
+    @apply w-[3rem] h-[0.2rem] bg-dark block round-[5rem]
+  } */
+/* .toggle__menu span {
+    width: 3rem;
+    height: 0.2rem;
+    background-color: #ffa700;
+    display: block;
+    border-radius: 5rem;
+    transition: 0.5s ease;
+  }
+  .toggle__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .toggle__menu.open span:first-child {
+    transform: translate(0, 7px) rotate(225deg);
+    transition: 0.5s ease;
+  }
+  .toggle__menu.open span:last-child {
+    transform: translate(0, -7px) rotate(-225deg);
+    transition: 0.5s ease;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    opacity: 0;
+    transition: 0.5s ease;
+  } 
+
+/* VERSION HEADER */
+/* .version a {
+  @apply text-primary_blue;
+}
+.version p {
+  @apply text-light;
+}
+/* BANNER */
+/* .banner h1 {
+  @apply text-light text-center pt-10 text-[4rem];
+}
+.banner p {
+  @apply text-light_light text-center;
+}
+.banner a i {
+  @apply text-light;
+}
+.banner__t a i {
+  @apply items-center text-light;
+}
+.banner__t a {
+  @apply items-center;
+}
+.banner__t {
+  @apply text-center;
+} */
+/* .banner__btn a i {
+    @apply 
+} */
+
+/* .banner btn */
+/* .btn {
+  @apply bg-transparent inline-block p-[1rem,2rem] border border-solid border-transparent;
+}
+.bg--blue {
+  @apply bg-primary_blue text-light text-center p-5;
+} */
+
+
+/* .header .header__nav.open {
+    @apply h-[50rem] pt-5 ease-in duration-500;
+  }
+  .header .header__nav.open {
+      @apply 
+  } */
