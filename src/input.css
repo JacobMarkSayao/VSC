@@ -51,11 +51,11 @@
       @apply text-[1rem];
     }
     .header .header__nav {
-      @apply flex flex-col absolute h-0 overflow-y-scroll bg-l_dark left-0 w-full;
+      @apply z-50 flex flex-col absolute h-0 overflow-y-scroll bg-l_dark left-0 w-full ease-in duration-300;
     }
-    /* .header .header__nav li:last-child {
-      @apply absolute left-0 bottom-0 w-full;
-    } */
+    .header .header__nav.open {
+      @apply h-[24.5rem] ease-in-out duration-300;
+    }
     .header .header__nav li {
       @apply py-3 px-5;
     }
@@ -68,11 +68,8 @@
     .header .header__wrapper {
       @apply flex items-center justify-between;
     }
-    .header .header__nav.open {
-        @apply h-[24.5rem] ease-in-out duration-300;
-    }
     .header .header__wrapper .toggle__menu.open {
-        @apply bg-primary_blue rounded-[.2rem]; 
+      @apply bg-primary_blue rounded-[.2rem];
     }
   }
 }
@@ -86,87 +83,165 @@
   }
 }
 
-/* .header__text {
-    @apply flex gap-2;
-  }
-  .header__text img {
-    @apply h-[2rem] w-[2rem];
-  }
-  .header__text h1 {
-    @apply text-light;
-  } */
-/* .toggle__menu {
-    @apply w-[3rem] h-[0.2rem] bg-dark block round-[5rem]
-  } */
-/* .toggle__menu span {
-    width: 3rem;
-    height: 0.2rem;
-    background-color: #ffa700;
-    display: block;
-    border-radius: 5rem;
-    transition: 0.5s ease;
-  }
-  .toggle__menu {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .toggle__menu.open span:first-child {
-    transform: translate(0, 7px) rotate(225deg);
-    transition: 0.5s ease;
-  }
-  .toggle__menu.open span:last-child {
-    transform: translate(0, -7px) rotate(-225deg);
-    transition: 0.5s ease;
-  }
-  .toggle__menu.open span:nth-child(2) {
-    opacity: 0;
-    transition: 0.5s ease;
-  } 
-
 /* VERSION HEADER */
-/* .version a {
+.version .v_text {
+  @apply flex justify-center;
+}
+.version a {
   @apply text-primary_blue;
 }
 .version p {
-  @apply text-light;
+  @apply text-light text-center;
 }
+
 /* BANNER */
-/* .banner h1 {
-  @apply text-light text-center pt-10 text-[4rem];
+.banner {
+  @apply text-center;
 }
-.banner p {
-  @apply text-light_light text-center;
+.banner .banner__wrapper {
+  @apply flex flex-col items-center justify-center;
+}
+.banner h1 {
+  @apply text-light text-center text-[2.5rem];
 }
 .banner a i {
   @apply text-light;
+}
+
+.banner__t p {
+  @apply text-light_light text-center;
 }
 .banner__t a i {
   @apply items-center text-light;
 }
 .banner__t a {
-  @apply items-center;
+  @apply items-center text-light;
 }
 .banner__t {
   @apply text-center;
-} */
-/* .banner__btn a i {
-    @apply 
-} */
-
-/* .banner btn */
-/* .btn {
-  @apply bg-transparent inline-block p-[1rem,2rem] border border-solid border-transparent;
 }
-.bg--blue {
-  @apply bg-primary_blue text-light text-center p-5;
-} */
+.banner__btn a h3 {
+  @apply font-bold
+}
+.banner__btn a {
+  @apply px-9 items-center text-light text-center ;
+}
+.banner__btn a small {
+  @apply text-light flex text-center;
+}
+.banner__btn button {
+  @apply py-4;
+}
+.banner__btn button i {
+  @apply text-light;
+}
+.banner__btn {
+  @apply flex gap-[.2rem] justify-center relative;
+}
+
+.drop__down {
+  @apply hidden h-[30rem] bg-light border border-primary_blue duration-300;
+}
+.drop__down.open {
+  @apply block h-[12rem];
+}
 
 
-/* .header .header__nav.open {
-    @apply h-[50rem] pt-5 ease-in duration-500;
-  }
-  .header .header__nav.open {
-      @apply 
-  } */
+
+.banner__table table i {
+  @apply text-dark_dark;
+}
+.banner__table td:nth-child(3) {
+  @apply text-center;
+}
+.banner__table td:nth-child(3) i {
+  @apply text-center text-primary_blue;
+}
+.banner__table td:last-child  {
+  @apply text-dark_dark bg-light_gray text-center;
+}
+.banner__table td {
+  @apply text-left py-1;
+}
+.banner__table td:first-child {
+  @apply font-bold;
+}
+
+.banner__table .b__chev {
+  @apply flex gap-2 text-center text-dark_dark;
+}
+.banner__table .b__chev p {
+  @apply text-primary_blue;
+}
+
+.banner__table thead {
+  @apply border-b;
+}
+.banner__table thead:nth-child(4) {
+  @apply border-none;
+}
+
+.b__chev {
+  @apply justify-center;
+} 
+
+.balony__banner {
+  @apply bg-dark_dark p-1 mt-2 px-8 rounded-[1rem] relative;
+}
+.balony__banner a{
+  @apply text-primary_blue;
+}
+.balony__banner small {
+  @apply text-light_light;
+}
+.balony__banner {
+  @apply text-primary_blue;
+}
+.balony__banner:after {
+  @apply content-[""] absolute right-3 bg-dark_dark h-3 w-3 rotate-45 bottom-6;
+}
+
+.btm__banner {
+  @apply text-center;
+}
+.btm__banner p {
+  @apply text-light;
+}
+.btm__banner small {
+  @apply text-light_light;
+}
+.btm__banner a {
+  @apply text-primary_blue;
+}
+
+/* SERVICES */
+.services__img {
+  @apply flex flex-col items-center;
+}
+.services__img img {
+  @apply w-[16rem];
+}
+.services__text h4 {
+  @apply pb-5;
+}
+
+.services {
+  @apply bg-light pt-5;
+}
+
+.services:nth-child(odd) {
+  @apply bg-light_gray;
+}
+.services:nth-child(even) {
+  @apply bg-light;
+}
+.services:nth-child(4){
+  @apply scale-75;
+}
+
+.services__img4 img {
+  @apply scale-50 duration-1000;
+}
+.services__img4 img:hover {
+  @apply scale-75;
+}
