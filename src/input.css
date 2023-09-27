@@ -30,10 +30,17 @@
 
   @layer components {
     .header {
-      @apply relative;
+      position: relative;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      transition: 0.5s ease;
     }
     .header a {
       @apply text-light;
+    }
+    .header .branding {
+      @apply lg:flex lg:flex-row lg:gap-5;
     }
     .header .branding img {
       @apply w-7;
@@ -47,11 +54,15 @@
     .header .header__action {
       @apply hidden;
     }
+    .header .header__action a {
+      @apply lg:hidden;
+    }
     .header .header__nav li a {
       @apply text-[1rem];
     }
     .header .header__nav {
-      @apply z-50 flex flex-col absolute h-0 overflow-y-scroll bg-l_dark left-0 w-full ease-in duration-300;
+      @apply z-50 flex flex-col absolute h-0 overflow-y-scroll bg-l_dark left-0 w-full ease-in duration-300 
+      lg:static lg:h-14 lg:overflow-hidden lg:flex lg:flex-row;
     }
     .header .header__nav.open {
       @apply h-[24.5rem] ease-in-out duration-300;
@@ -84,6 +95,9 @@
 }
 
 /* VERSION HEADER */
+.version {
+  @apply pt-16 lg:pt-[6rem];
+}
 .version .v_text {
   @apply flex justify-center;
 }
@@ -99,10 +113,21 @@
   @apply text-center;
 }
 .banner .banner__wrapper {
-  @apply flex flex-col items-center justify-center;
+  @apply flex flex-col items-center justify-center 
+  lg:flex lg:flex-row lg:items-start;
+}
+.banner__brand h1 {
+  @apply lg:flex lg:flex-row lg:items-start lg:justify-center;
 }
 .banner h1 {
-  @apply text-light text-center text-[2.5rem];
+  @apply text-light text-center text-[2.5rem] 
+  lg:pt-10;
+}
+.banner img {
+  @apply lg:w-[50rem];
+}
+.banner h2 {
+  @apply text-light text-center text-[2rem];
 }
 .banner a i {
   @apply text-light;
@@ -121,10 +146,10 @@
   @apply text-center;
 }
 .banner__btn a h3 {
-  @apply font-bold
+  @apply font-bold;
 }
 .banner__btn a {
-  @apply px-9 items-center text-light text-center ;
+  @apply px-9 items-center text-light text-center;
 }
 .banner__btn a small {
   @apply text-light flex text-center;
@@ -146,8 +171,6 @@
   @apply block h-[12rem];
 }
 
-
-
 .banner__table table i {
   @apply text-dark_dark;
 }
@@ -157,7 +180,7 @@
 .banner__table td:nth-child(3) i {
   @apply text-center text-primary_blue;
 }
-.banner__table td:last-child  {
+.banner__table td:last-child {
   @apply text-dark_dark bg-light_gray text-center;
 }
 .banner__table td {
@@ -183,12 +206,12 @@
 
 .b__chev {
   @apply justify-center;
-} 
+}
 
 .balony__banner {
   @apply bg-dark_dark p-1 mt-2 px-8 rounded-[1rem] relative;
 }
-.balony__banner a{
+.balony__banner a {
   @apply text-primary_blue;
 }
 .balony__banner small {
@@ -218,9 +241,9 @@
 .services__img {
   @apply flex flex-col items-center;
 }
-.services__img img {
-  @apply w-[16rem];
-}
+/* .services__img img {
+  @apply w-[20rem];
+} */
 .services__text h4 {
   @apply pb-5;
 }
@@ -235,7 +258,7 @@
 .services:nth-child(even) {
   @apply bg-light;
 }
-.services:nth-child(4){
+.services:nth-child(4) {
   @apply scale-75;
 }
 
@@ -245,3 +268,90 @@
 .services__img4 img:hover {
   @apply scale-75;
 }
+
+/* SLIDER */
+.slider__img img {
+  @apply w-[4.5rem] h-[4.5rem] absolute rounded-full shadow-[2px_2px_2px_0];
+}
+.slider__text {
+  @apply pt-2 pl-20 relative;
+}
+.slider__text a {
+  @apply text-primary_blue;
+}
+.slider__card h3 {
+  @apply font-bold flex space-x-5;
+}
+.slider__card p {
+  @apply font-thin pb-3;
+}
+.slider__text i {
+  @apply text-light_light absolute right-0;
+}
+
+/* .slider__chevron {
+  @apply flex items-center justify-between;
+} */
+
+/* .slider__wrapper {
+  @apply flex items-center justify-center;
+} */
+
+.tns-outer {
+  @apply relative 
+  lg:flex lg:flex-row;
+}
+.tns-controls {
+  @apply absolute top-[50%] w-full flex justify-between z-50;
+}
+.tns-controls i {
+  @apply text-light_light;
+}
+.slider .tweet__page .tns-item {
+  @apply lg:flex;
+}
+.header.blue {
+  @apply bg-primary_blue ease-in-out duration-500;
+}
+
+/* DESKTOP */
+/* @media (min-width: 1024px) { */
+/* HEADER */
+/* .header .toggle__menu {
+    @apply hidden;
+  }
+  .header .header__nav {
+    @apply flex flex-row static h-14;
+  }
+  .header .branding {
+    @apply flex;
+  }
+  .header .header__brand h1{
+    @apply w-[12rem];
+  }
+  .header .header__nav li:nth-child(8) {
+    @apply hidden;
+  } */
+
+/* BANNER */
+/* .banner .banner__wrapper {
+  @apply flex flex-row items-start;
+}
+.banner .banner__brand h1 {
+  @apply flex flex-row items-start justify-center;
+}
+.banner h1 {
+  @apply pt-10;
+}
+.banner img {
+  @apply w-[50rem];
+}
+} */
+/* VERSION BANNER */
+/* .version {
+  @apply pt-[6rem];
+} */
+/* SLIDER */
+/* .slider .tns-outer {
+  @apply flex flex-row;
+} */

@@ -15,6 +15,10 @@ module.exports = {
       fontFamily: {
         'Poppins': 'sans-serif',
       },
+      // backgroundImage: {
+      //   'twitter': 'url(../img)'
+      // }
+      
     },
   },
   plugins: [],
